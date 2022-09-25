@@ -10,11 +10,24 @@
 		<meta charset="ISO-8859-1" />
 		<title>Loucademia</title>
 		<link rel="stylesheet" type="text/css" href="css/Loucademia_Estilo.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..400,0..1,-50..200" />
 	</head>
 	<body>
 		<!--  Cabeçalho - Início -->
 		<header>
-			<img src="images/Loucademia_Logotipo.png" />
+			
+			<div class="logo_modes">
+				<div>	
+					<img src="images/Loucademia_Logotipo.png" />
+				</div>		
+				<div>
+					<span class="material-symbols-outlined">wb_sunny</span>
+					<input type="checkbox" id="switch" name="switch" />					
+					<span class="material-symbols-outlined">nightlight</span>						
+				</div>				
+			</div>
+			<div class="box"></div>
 			<nav>
 				<div>
 					<a jsf:outcome="dadosAluno">Novo aluno</a><br />
@@ -38,5 +51,6 @@
 		<!--  Cabeçalho - Fim -->
 		
 		<ui:insert name="conteudo" />
+		<script src="script/index.js"></script>
 	</body>
 </html>

@@ -52,7 +52,7 @@ public class AlunoService {
 	
 	public List<Aluno> listAlunos(String matricula, String nome, Integer rg, Integer telefone) {
 		if (StringUtils.isEmpty(matricula) && StringUtils.isEmpty(nome) && rg == null && telefone == null) {
-			throw new ValidationException("Pelo menos um critério de pesquisa deve ser fornecido");
+			throw new ValidationException("Pelo menos um critÃ©rio de pesquisa deve ser fornecido");
 		}
 		
 		return alunoRepository.listAlunos(matricula, nome, rg, telefone);
@@ -65,7 +65,7 @@ public class AlunoService {
 	
 	public List<Acesso> listAcessosAlunos(String matricula, LocalDate dataInicial, LocalDate dataFinal) {
 		if (StringUtils.isEmpty(matricula) && dataInicial == null && dataFinal == null) {
-			throw new ValidationException("Pelo menos um critério de pesquisa deve ser fornecido");
+			throw new ValidationException("Pelo menos um critÃ©rio de pesquisa deve ser fornecido");
 		}
 		
 		return alunoRepository.listAcessosAlunos(matricula, dataInicial, dataFinal);

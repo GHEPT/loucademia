@@ -22,7 +22,7 @@ public class AcessoService {
 	
 	public TipoAcesso registrarAcesso(String matricula, Integer rg) {
 		if (StringUtils.isEmpty(matricula) && rg == null) {
-			throw new ValidationException("… preciso fornecer a matrÌcula ou o RG do aluno");
+			throw new ValidationException("√â preciso fornecer a matr√≠cula ou o RG do aluno");
 		}
 		
 		Aluno aluno;
@@ -33,7 +33,7 @@ public class AcessoService {
 		}
 		
 		if (aluno == null) {
-			throw new ValidationException("O aluno n„o foi encontrado");
+			throw new ValidationException("O aluno n√£o foi encontrado");
 		}
 		
 		Acesso ultimoAcesso = acessoRepository.findUltimoAcesso(aluno);
